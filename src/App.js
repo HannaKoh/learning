@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {List} from "./Component/List";
+import {CalcButton} from "./Component/Calc";
+import Start from "./Component/start";
+
+// const number = ['Hanna','Nikolay','Alexsandr','Anastasia','Andrue'];
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <header>
+                {/*<List item={number} />*/}
+                <Start />
+                {/*<CalcButton />*/}
+            </header>
+        </div>
+
+    );
 }
 
 export default App;
