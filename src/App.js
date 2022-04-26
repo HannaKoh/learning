@@ -1,19 +1,15 @@
 import React from 'react';
 import './App.css';
-import {List} from "./Component/List";
-import {CalcButton} from "./Component/Calc";
 import Start from "./Component/start";
+import Registration from "./Component/Registration";
+import Login from "./Component/Login";
 
-// const number = ['Hanna','Nikolay','Alexsandr','Anastasia','Andrue'];
-
-
-function App() {
+const App = (props) => {
     return (
         <div className="App">
             <header>
-                {/*<List item={number} />*/}
-                <Start />
-                {/*<CalcButton />*/}
+                <Registration store={props.store.registrationPage}/>
+                <Login store={props.store.loginPage}/>
             </header>
         </div>
 

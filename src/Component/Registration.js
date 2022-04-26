@@ -1,77 +1,40 @@
 import React from "react";
-import {changeRegistration} from "./actionCreators/Registration";
-import {connect} from "react-redux";
-import {registration} from "./reducer/registration";
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import s from './Registration.module.css'
 
-class RegistrationComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            username: '',
-            firstname: '',
-            lastname: '',
-            secondname: '',
-            password: ''
-        }
-    }
+const Registration = (props) => {
 
-    onClickChangeRegistration = (e) => {
-        this.props.onChangeRegistration(this.state.username)
-    }
+    return (
 
-    changeLocalRegistration = (e) => {
-        this.setState({username: e.target.value})
-    }
-    changeLocalFirstName = (e) => {
-        this.setState({firstname: e.target.value})
-    }
-    changeLocalLastName = (e) => {
-        this.setState({lastname: e.target.value})
-    }
-    changeLocalSecondName = (e) => {
-        this.setState({secondname: e.target.value})
-    }
-    changeLocalPassword = (e) => {
-        this.setState({password: e.target.value})
-    }
-
-    render() {
-        return (
+        <div>
             <div>
-                <div>
-                    <p>{this.props.registration}</p>
-                    <p>Имя пользователя</p>
-                    <input onChange={this.changeLocalRegistration}></input>
-                    <p>Имя</p>
-                    <input onChange={this.changeLocalFirstName}></input>
-                    <p>Фамилия</p>
-                    <input onChange={this.changeLocalLastName}></input>
-                    <p>Отчество</p>
-                    <input onChange={this.changeLocalSecondName}></input>
-                    <p>Пароль</p>
-                    <input onChange={this.changeLocalPassword}></input>
+                <h1>Создайте учетную запись</h1>
+                <div className={s.Input}>
+                    <TextField id="outlined-basic" label="Фамилия" variant="outlined" value={props.store.lastName}/>
                 </div>
-                <div>
-                    <button onClick={this.onClickChangeRegistration}>Зарегистрироваться</button>
-                    <button>Закрыть</button>
+                <div className={s.Input}>
+                    <TextField id="outlined-basic" label="Имя" variant="outlined" value={props.store.firstName}/>
+                </div>
+                <div className={s.Input}>
+                    <TextField id="outlined-basic" label="Отчество" variant="outlined" value={props.store.secondName}/>
+                </div>
+                <div className={s.Input}>
+                    <TextField id="outlined-basic" label="Имя пользователя" variant="outlined" value={props.store.userName}/>
+                </div>
+                <div className={s.Input}>
+                    <TextField id="outlined-basic" label="Пароль" variant="outlined" value={props.store.registrationPage.password}/>
                 </div>
             </div>
+            <div className={s.Button}>
+                <Button variant="contained" color="primary">Зарегистрироваться</Button>
+            </div>
+            <div className={s.Button}>
+                <Button variant="outlined" color="primary">Закрыть</Button>
+            </div>
+        </div>
 
-        )
-    }
+    )
 }
 
-const mapStateToProps = state => {
-    return {
-        registration: state.registration
-    }
-}
-const mapDispatchToProps = dispatch => {
-    return {
-        onChangeRegistration: registration => {
-            dispatch(changeRegistration(registration))
-        }
-    }
-}
-
-export const Registration = connect(mapStateToProps, mapDispatchToProps)(RegistrationComponent);
+export default Registration;

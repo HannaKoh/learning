@@ -1,11 +1,15 @@
-import {combineReducers, createStore} from "redux";
-import {loginReducer} from "./Login-reducer";
-import {registrationReducer} from "./Registration-reduce";
-
-let Reducers = combineReducers({
-        login: loginReducer,
-    registration: registrationReducer
-    }
-);
-
-export default Reducers;
+// import { configureStore } from '@reduxjs/toolkit';
+//
+// import {registrationReducer} from "./Registration-reduce";
+//
+// let store = configureStore( {
+//     reducer: {
+//         // loginPage: loginReducer
+//         // registrationPage: registrationReducer
+//         }
+// }
+//     )
+//
+//     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+//
+// export default store;
