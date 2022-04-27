@@ -2,7 +2,7 @@ import React from "react";
 import logo from './ai.svg';
 import s from "./start.module.css";
 import Button from '@mui/material/Button';
-import {Registration} from "./Registration";
+import {NavLink} from "react-router-dom";
 
 
 const Start = () => {
@@ -20,11 +20,15 @@ const Start = () => {
                     <h2 align="left">Помогайте обучать искусственный
                         <div>интелект!</div>
                     </h2>
+                    <NavLink to='/registration' className={s.navLink}>
                     <Button variant = "contained" color = "primary">Зарегистрируйтесь</Button>
+                    </NavLink>
                 </div>
                 <div>
                     <h3 align="left" >Уже зарегистрированы?</h3>
-                    <Button variant = "outlined" color = "primary">Войти</Button>
+                    <NavLink to='/login' className={s.navLink}>
+                    <Button variant = "outlined" color = "primary" href='/login'>Войти</Button>
+                    </NavLink>
                 </div>
             </div>
         </div>

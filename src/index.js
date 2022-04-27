@@ -2,13 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import './App.css';
 import reportWebVitals from './reportWebVitals';
+import store from './Component/redux/store';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Registration from "./Component/Registration";
+import Login from "./Component/Login";
+import Start from "./Component/start";
 
 
     ReactDOM.render(
+        <BrowserRouter>
         <React.StrictMode>
-            <App />
-        </React.StrictMode>,
+            {/*<App />*/}
+            <div className="App">
+            <Routes >
+                <Route path='/start' element={<Start />} />
+                <Route path='/registration'  element={<Registration store={store.registrationPage}/>} />
+                <Route path='/login' element={<Login store={store.loginPage}/>} />
+            </Routes>
+            </div>
+        </React.StrictMode>
+            </BrowserRouter>,
         document.getElementById('root')
     );
 

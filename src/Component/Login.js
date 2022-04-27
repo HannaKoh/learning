@@ -2,6 +2,7 @@ import React from "react";
 import s from "./Login.module.css";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import {NavLink} from "react-router-dom";
 
 const Login = (props) => {
 
@@ -22,11 +23,17 @@ const Login = (props) => {
                 </div>
             </div>
             <div className={s.Button}>
+                <NavLink to='/update-password' className={s.navLink}>
                 <Button variant="text">Забыли пароль?</Button>
+                </NavLink>
+                <NavLink to='/work-window' className={s.navLink}>
                 <Button variant="contained" color="primary">Вход</Button>
+                </NavLink>
             </div>
             <div className={s.Button_Reg}>
-                <Button variant="outlined" color="primary">Зарегистрироваться</Button>
+                <NavLink to='/registration' className={s.navLink}>
+                <Button variant="outlined" color="primary" >Зарегистрироваться</Button>
+                </NavLink>
             </div>
         </div>
     )

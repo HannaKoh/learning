@@ -26,5 +26,9 @@
 }
 
 .Registration {
+
     margin-bottom: 5em;
+}
+.navLink {
+    text-decoration: none;
 }
