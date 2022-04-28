@@ -21,13 +21,13 @@ const Start = () => {
                         <div>интелект!</div>
                     </h2>
                     <NavLink to='/registration' className={s.navLink}>
-                    <Button variant = "contained" color = "primary">Зарегистрируйтесь</Button>
+                    <Button className={s.Button} variant = "contained" color = "primary">Зарегистрируйтесь</Button>
                     </NavLink>
                 </div>
                 <div>
                     <h3 align="left" >Уже зарегистрированы?</h3>
                     <NavLink to='/login' className={s.navLink}>
-                    <Button variant = "outlined" color = "primary" href='/login'>Войти</Button>
+                    <Button className={s.Button} variant = "outlined" color = "primary" href='/login'>Войти</Button>
                     </NavLink>
                 </div>
             </div>

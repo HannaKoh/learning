@@ -16,8 +16,9 @@ import Start from "./Component/start";
         <React.StrictMode>
             {/*<App />*/}
             <div className="App">
+                {/*<Start />*/}
             <Routes >
-                <Route path='/start' element={<Start />} />
+                <Route path='/' element={<Start />} />
                 <Route path='/registration'  element={<Registration store={store.registrationPage}/>} />
                 <Route path='/login' element={<Login store={store.loginPage}/>} />
             </Routes>

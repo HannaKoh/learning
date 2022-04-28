@@ -1,17 +1,38 @@
+.Registration {
+    position: absolute;
+    top: 15%;
+    left: 37%;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 1em;
+    box-sizing: border-box;
+    width: 30em;
+    height: 37em;
+    padding: 0em 4em 0em 4em;
+}
+
 .navLink {
     text-decoration: none;
 }
 
 .Input {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+}
+
+.Pole {
+    width: 22em;
 }
 
 .Button {
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
+
+.FontButton {
+    border-radius: 5em;
+    width: 25em;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+

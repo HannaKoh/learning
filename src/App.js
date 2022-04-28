@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Start from "./Component/start";
+
 
 
 const App = (props) => {
@@ -7,7 +9,7 @@ const App = (props) => {
 
         <div className="App">
             <header>
-
+<Start />
             </header>
         </div>
 

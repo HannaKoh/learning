@@ -29,6 +29,14 @@
 
     margin-bottom: 5em;
 }
+
 .navLink {
     text-decoration: none;
+}
+
+.Button {
+    border-radius: 5em;
+    width: 25em;
+    text-transform: capitalize;
+    font-weight: bold;
 }
